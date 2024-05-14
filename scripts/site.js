@@ -13,10 +13,34 @@ let teams = [
 function showTeamInfo() {
     const teamSelect = document.getElementById("teamSelect");
     const selectedTeamName = teamSelect.options[teamSelect.selectedIndex].text;
-    const selectedTeamNameCode = teamSelect.value;
+    const selectedTeamCode = teamSelect.value;
     const teamInfoPara = document.getElementById("teamInfo");
-    teamInfoPara.textContent = `You selected: ${selectedTeamName} (${selectedTeamNameCode})`;
+
+    if (selectedTeamCode === "") {
+        // Clear team info paragraph if "Select a team" is selected
+        teamInfoPara.textContent = "";
+    } else { 
+        // Display team info if a team is selected
+        teamInfoPara.textContent = `You selected: ${selectedTeamName} (${selectedTeamCode})`;
+    }
 }
 
 
 
+//Function to handle click event of submit button
+document.getElementById("submitButton").addEventListener("click", function(){
+    const teamSelect = document.getElementById("teamSelect");
+    const selectedTeamName = teamSelect.options[teamSelect.selectedIndex].text;
+    const selectedTeamCode = teamSelect.value;
+    const selectedTeamPlays = teamSelect.options[teamSelect.selectedIndex].getAttribute("data-plays");
+    const teamInfoPara = document.getElementById("teamInfo");
+
+    if (selectedTeamCode === "") {
+        // Clear team info paragraph if "Select a team" is selected
+        teamInfoPara.textContent = "";
+    } else {
+        // Check if data-plays is set
+        const playsMessage = selectedTeamPlays ? ` who play in ${selectedTeamPlays}` : ''; 
+        teamInfoPara.textContent = `You selected the ${selectedTeamName} (${selectedTeamCode}) who plays in ${playsMessage}`;
+    }
+});
