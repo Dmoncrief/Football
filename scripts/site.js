@@ -44,3 +44,7 @@ document.getElementById("submitButton").addEventListener("click", function(){
         teamInfoPara.textContent = `You selected the ${selectedTeamName} (${selectedTeamCode}) who plays in ${playsMessage}`;
     }
 });
+
+
+// --------------------------------------------
+
