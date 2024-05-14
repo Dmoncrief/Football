@@ -1,0 +1,28 @@
+
+body {
+    font-family: Arial, sans-seriff;
+    margin: 0;
+    padding: 0;
+}
+
+h1{
+    margin-top: 0;
+    text-align: center;
+}
+
+
+#teamSelect{
+    width: 100px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+#teamInfo{ 
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius:5px;
+}
