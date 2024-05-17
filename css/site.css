@@ -21,10 +21,10 @@ h1{
 
 
 #teamInfo{ 
-    margin-top: 20px;
+    margin-top: 30px;
     padding: 10px;
     border: 1px solid #ccc;
-    border-radius:5px;
+    border-radius:3px;
 }
 
 button:hover {
@@ -44,7 +44,8 @@ button{
 
 
 .container{
-    width:300px;
+    width:400px;
+    height:500px;
     margin:50px auto;
     padding: 20px;
     background-color: #f9f9f9;
